@@ -1,0 +1,473 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end Global Rules */
+/* start header */
+header {
+  background-color: rgb(0 0 0 / 30%);
+  height: 100px;
+  position: absolute !important;
+  width: 100%;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: space-between;
+  /* height: 100px; */
+  align-items: center;
+  height: 100%;
+}
+header .container .logo img {
+  height: 95px;
+}
+
+header nav ul {
+  display: flex;
+  /* justify-content: space-between; */
+}
+header nav ul li a {
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+header nav ul li a:hover,
+header nav ul .active {
+  color: yellow;
+}
+header nav ul li {
+}
+span {
+  width: 5px;
+  height: 5px;
+  background-color: yellow;
+  position: relative;
+  top: 5px;
+  margin-left: 18px;
+}
+header nav .toggle-menu {
+  font-size: 20px;
+  position: relative;
+}
+@media (max-width: 992px) {
+  header nav .toggle-menu {
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  header {
+    position: relative;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    position: absolute;
+    right: 0;
+    width: 100%;
+    /* top: 100px; */
+    padding: 20px;
+    display: none;
+    transition: all 0.3;
+    background-color: rgb(0 0 0 / 30%);
+  }
+  header nav ul a {
+    margin: 10px;
+  }
+  header span {
+    display: none;
+  }
+  header nav ul li {
+    margin-bottom: 20px;
+    padding-left: 50px;
+  }
+  header nav ul li.active {
+    margin-top: 20px;
+  }
+  header nav i.toggle-menu:hover + ul {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  header nav i.toggle-menu {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  header nav ul li {
+    padding-left: 2px;
+  }
+  header nav ul {
+    padding: 0px;
+  }
+}
+
+/* end header */
+/* start lainding */
+.landig {
+  height: 100vh;
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landig .overlay {
+  width: 100%;
+  height: 262.03px;
+  position: absolute;
+  background-color: rgb(0 0 0 / 30%);
+}
+.landig .text {
+  width: 818px;
+  /* border: 2px solid red; */
+  height: 164px;
+  position: relative;
+  /* background-color: rgb(0 0 0 / 30%); */
+}
+.landig .text h1 {
+  /* border: 2px solid red; */
+  width: fit-content;
+  margin: 0 auto;
+  color: aliceblue;
+  text-align: center
+}
+.landig .text h1 .def {
+  /* border: 2px solid red; */
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  top: 26%;
+  left: 35%;
+  background-color: transparent;
+}
+.landig button {
+  /* all: unset; */
+  all: unset;
+
+  position: absolute;
+  top: 50%;
+  left: 32%;
+
+  border-radius: 12px;
+  padding: 10px 15px;
+
+  display: block;
+
+  margin: 20px 0;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: 4px solid yellow;
+  transition: all 0.3s;
+  font-size: 25px;
+  transition: all 0.5s;
+  /* border-bottom-left-radius: 50%; */
+
+  /* border-color: transparent; */
+}
+.landig button:hover {
+  border: 4px solid white;
+  background-color: yellow;
+  color: black;
+}
+@media (max-width: 434px) {
+  .landig .text h1 span.def {
+    margin-left: 15px;
+    padding-top: 0;
+    position: absolute;
+    top: 38px;
+  }
+  .landig button {
+    /* position: absolute; */
+    left: 93px;
+  }
+  .landig .text h1 {
+    margin-left: 65px;
+    font-size: 20px;
+  }
+}
+/* end landig */
+/* .spacial-heading */
+.spacial-heading .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.spacial-heading .content p {
+  font-size: 14px;
+  text-align: center;
+}
+.spacial-heading .content h1 {
+  font-size: 30px;
+}
+.spacial-heading .content hr {
+  width: 170px;
+  height: 3px;
+  background-color: yellow;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* .spacial-heading */
+/* srvices */
+.sec-serv p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+.sevices .container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.sevices .container .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  /* width: 200px; */
+}
+.sevices .container .col i {
+  border: 1px solid yellow;
+  width: fit-content;
+  margin: 0 auto 20px;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 30px;
+  background-color: yellow;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sevices .container .col i:hover {
+  color: yellow;
+  border: 1px solid black;
+  background-color: white;
+}
+.sevices .container .col p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* srvices */
+/* start card  */
+.card {
+  margin-top: 100px;
+  background-color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.card p {
+  color: white;
+  line-height: 1.2;
+}
+.card .container .head {
+  text-align: center;
+}
+.card .container .head h1 {
+  color: yellow;
+}
+
+.card .container .tail {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .card .container .tail .col {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+.card .container .tail .col {
+  margin: 5px;
+  margin-top: 50px;
+  max-width: 170px;
+}
+.card .container .tail .col h3 {
+  margin: 10px;
+  color: white;
+}
+.card .container .tail .col i {
+  font-size: 20px;
+  color: yellow;
+}
+
+/* end card  */
+/* start work  */
+.work .container .menu ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.work .container .menu ul span {
+  margin-right: 15px;
+}
+.work .container .menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  transition: all 0.3s;
+}
+.work .container .menu ul li {
+  /* margin-bottom: 20px; */
+  padding-bottom: 50px;
+}
+.work .container .menu ul li a.active,
+.work .container .menu ul li a:hover {
+  color: yellow;
+  stroke: black;
+  border-bottom: 2px solid cornflowerblue;
+  padding-bottom: 10px;
+}
+.work .container .content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-bottom: 100px;
+}
+.work .container .content img {
+  height: 420px;
+  width: 650px;
+  background-size: cover;
+  /* border: 2px solid black; */
+  transform: scale(0.9);
+  border-radius: 20px;
+  transition: all 0.3s;
+  box-shadow: 10 0 black;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+}
+.work .container .content img:hover {
+  /* padding: 5px; */
+  transform: scale(1);
+}
+.work .container .content .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.work .container .content .text h2 {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.work .container .content .text p {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.work .container .content .text button {
+  /* all: unset; */
+  width: 170px;
+  height: 58px;
+  background-color: yellow;
+  border: none;
+  color: aliceblue;
+  margin-left: 15px;
+  border: 2px solid yellow;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.work .container .content .text button:hover {
+  background-color: white;
+  color: yellow;
+}
+@media (max-width: 992px) {
+  .work .container .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .work .container .content .text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .work .container .content .text button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .work .container .content img {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* .work .container .content .image img {
+  height: 440px;
+  width: 670px;
+} */
+/* end  work  */
+/* start image */
+.images img {
+  width: 223px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s;
+  padding: 10px;
+  transform: scale(0.9);
+}
+.images img:hover {
+  border: 1px solid yellow;
+  transform: rotate(5deg);
+}
+.images .col1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.images .col2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* end image */
