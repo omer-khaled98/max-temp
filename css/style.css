@@ -211,7 +211,7 @@ header nav .toggle-menu {
 }
 .landig button:hover {
   border: 4px solid white;
-  background-color: yellow;
+  background-color: #FFE600;
   color: black;
 }
 @media (max-width: 434px) {
